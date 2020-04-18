@@ -1,0 +1,4 @@
+#!/bin/sh
+docker build . --tag resume-builder:1.0 && \
+docker run -v "$(pwd)"/dist:/dist resume-builder:1.0 && \
+git add dist

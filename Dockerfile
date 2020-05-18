@@ -7,5 +7,7 @@ RUN wget https://github.com/jgm/pandoc/releases/download/2.2.1/pandoc-2.2.1-1-am
 RUN git clone https://github.com/mszep/pandoc_resume
 WORKDIR pandoc_resume
 COPY README.md markdown/resume.md
+COPY styles.css styles/chmduquesne.css
+COPY styles.tex styles/chmduquesne.tex
 RUN make
 CMD cp -R ./output/* /dist
